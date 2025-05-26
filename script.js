@@ -85,6 +85,9 @@ window.addEventListener("DOMContentLoaded", () => {
     sobre.addEventListener("click", () => {
       papel.classList.add("visible");
       solapa.classList.add("abierta");
+      setTimeout(() => {
+        sobre.style.display = "none";
+      }, 600);
     }, { once: true });
   }
 });
