@@ -63,3 +63,12 @@ function animarFuegos() {
 }
 
 setInterval(animarFuegos, 500);
+ const sobre = document.getElementById("sobre");
+const papel = document.getElementById("papel");
+
+if (sobre && papel) {
+  sobre.addEventListener("click", () => {
+    papel.classList.toggle("visible");
+  });
+}
+
