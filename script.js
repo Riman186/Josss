@@ -4,10 +4,37 @@ btn.addEventListener('click', () => {
   document.getElementById('mensaje').scrollIntoView({ behavior: 'smooth' });
 });
 
-// Mostrar regalo
+// Mostrar regalo con confeti
 const mostrarBtn = document.getElementById('mostrarRegalo');
 mostrarBtn.addEventListener('click', () => {
   document.getElementById('contenidoRegalo').classList.remove('oculto');
+  lanzarConfeti();
+});
+
+// Función de confeti simple
+function lanzarConfeti() {
+  for (let i = 0; i < 100; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particula');
+    particle.style.left = `${Math.random() * 100}vw`;
+    particle.style.backgroundColor = getRandomColor();
+    particle.style.animationDelay = `${Math.random()}s`;
+    document.body.appendChild(particle);
+    setTimeout(() => particle.remove(), 3000);
+  }
+}
+
+function getRandomColor() {
+  const colors = ['#FFD700', '#FF69B4', '#E6E6FA', '#F7C6D9'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Animar fotos al hacer clic
+const tarjetas = document.querySelectorAll('.tarjeta');
+tarjetas.forEach((tarjeta) => {
+  tarjeta.addEventListener('click', () => {
+    tarjeta.classList.toggle('girado');
+  });
 });
 
 // Fuegos artificiales (simple)
