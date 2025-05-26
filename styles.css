@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F7C6D9;
+  color: #4B0082;
+  text-align: center;
+}
+
+.hero {
+  background-color: #D8BFD8;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #E6E6FA;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FFD700;
+}
+
+.mensaje, .galeria, .regalo, .final {
+  padding: 50px 20px;
+}
+
+.mensaje p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fotos img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.oculto {
+  display: none;
+}
+
+#contenidoRegalo img {
+  max-width: 300px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: 300px;
+  background: #4B0082;
+  display: block;
+}
